@@ -16,14 +16,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Header scroll shadow
+  // Header scroll shadow + active nav tracking
   var header = document.getElementById('header');
+  var navLinks = nav.querySelectorAll('a');
+  var sections = [];
+  navLinks.forEach(function (link) {
+    var id = link.getAttribute('href').substring(1);
+    var sec = document.getElementById(id);
+    if (sec) sections.push({ el: sec, link: link });
+  });
+
   window.addEventListener('scroll', function () {
     if (window.scrollY > 10) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
+
+    var scrollPos = window.scrollY + 120;
+    var current = sections[0];
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].el.offsetTop <= scrollPos) {
+        current = sections[i];
+      }
+    }
+    navLinks.forEach(function (l) { l.classList.remove('active'); });
+    if (current) current.link.classList.add('active');
   });
 
   // Fade-in on scroll
