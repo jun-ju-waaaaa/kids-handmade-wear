@@ -361,41 +361,9 @@ img {
   flex-shrink: 0;
 }
 
-.about-logo-circle {
+.about-logo-img {
   width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 1px solid var(--color-border);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  background: var(--color-white);
-}
-
-.about-brand {
-  font-family: var(--font-serif-en);
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--color-text);
-  letter-spacing: 2px;
-  margin-top: 8px;
-}
-
-.about-brand-jp {
-  font-family: var(--font-serif-jp);
-  font-size: 11px;
-  color: var(--color-accent);
-  letter-spacing: 4px;
-}
-
-.about-brand-tag {
-  font-family: var(--font-serif-en);
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: var(--color-text-light);
-  font-style: italic;
+  height: auto;
 }
 
 .about-text p {
@@ -908,13 +876,8 @@ img {
     gap: 32px;
   }
 
-  .about-logo-circle {
+  .about-logo-img {
     width: 160px;
-    height: 160px;
-  }
-
-  .about-brand {
-    font-size: 18px;
   }
 
   .gallery {
