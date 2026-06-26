@@ -217,9 +217,9 @@ img {
 .hero {
   position: relative;
   height: 0;
-  padding-bottom: 47%;
+  padding-bottom: 40%;
   margin-top: var(--header-height);
-  background: url('../images/hero.jpg') center center / cover no-repeat;
+  background: url('../images/hero2.jpg') center center / cover no-repeat;
   overflow: hidden;
 }
 
@@ -891,7 +891,7 @@ img {
   }
 
   .hero {
-    padding-bottom: 75%;
+    padding-bottom: 60%;
     background-position: 60% center;
   }
 
