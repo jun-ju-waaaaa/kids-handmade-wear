@@ -941,8 +941,16 @@ img {
     position: static;
     transform: none;
     text-align: center;
-    padding: 28px 24px 36px;
+    padding: 20px 24px 12px;
     background: var(--color-bg);
+  }
+
+  .lace-divider {
+    height: 8px;
+  }
+
+  .about {
+    padding-top: 32px;
   }
 
   .hero-divider-mobile {
