@@ -892,7 +892,7 @@ img {
     right: 0;
     width: 55%;
     height: 100vh;
-    background: linear-gradient(to right, rgba(250, 248, 245, 0.6), rgba(250, 248, 245, 0.97) 40%, #faf8f5);
+    background: linear-gradient(to right, rgba(250, 248, 245, 0) 0%, rgba(250, 248, 245, 0.85) 40%, #faf8f5 70%);
     backdrop-filter: blur(6px);
     flex-direction: column;
     align-items: flex-end;
