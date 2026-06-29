@@ -955,7 +955,11 @@ img {
   }
 
   .hero-sub-mobile {
-    font-size: 12px;
+    display: none;
+  }
+
+  .hero-divider-mobile {
+    display: none;
   }
 
   .hero-scroll {
