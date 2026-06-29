@@ -219,7 +219,7 @@ img {
   height: 0;
   padding-bottom: 40%;
   margin-top: var(--header-height);
-  background: url('../images/hero3-mobile.jpg') center center / cover no-repeat;
+  background: url('../images/hero3-desktop.jpg') center center / cover no-repeat;
   overflow: hidden;
 }
 
@@ -924,6 +924,7 @@ img {
   .hero {
     height: auto;
     padding-bottom: 0;
+    background-image: url('../images/hero3-mobile.jpg');
     background-position: 60% center;
   }
 
