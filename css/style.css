@@ -223,6 +223,10 @@ img {
   overflow: hidden;
 }
 
+.hero-text-mobile {
+  display: none;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -891,8 +895,39 @@ img {
   }
 
   .hero {
-    padding-bottom: 60%;
-    background-position: 60% center;
+    height: auto;
+    padding-bottom: 0;
+    background: url('../images/hero3-mobile.jpg') center center / cover no-repeat;
+  }
+
+  .hero-text-mobile {
+    display: block;
+    position: relative;
+    padding: 32px 24px 40px;
+    background: linear-gradient(to right, rgba(245, 240, 235, 0.85) 60%, transparent 100%);
+  }
+
+  .hero-title-mobile {
+    font-family: var(--font-serif-jp);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--color-text);
+    letter-spacing: 2px;
+  }
+
+  .hero-divider-mobile {
+    width: 40px;
+    height: 1px;
+    background: var(--color-accent-light);
+    margin: 16px 0;
+  }
+
+  .hero-sub-mobile {
+    font-family: var(--font-sans-jp);
+    font-size: 12px;
+    line-height: 2;
+    color: var(--color-text-light);
   }
 
   .hero-scroll {
