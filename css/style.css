@@ -893,7 +893,8 @@ img {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #faf8f5;
+    background: rgba(250, 248, 245, 0.95);
+    backdrop-filter: blur(8px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
