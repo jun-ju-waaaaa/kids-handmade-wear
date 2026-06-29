@@ -7,12 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
   toggle.addEventListener('click', function () {
     toggle.classList.toggle('active');
     nav.classList.toggle('open');
+    document.body.classList.toggle('menu-open');
   });
 
   nav.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
       toggle.classList.remove('active');
       nav.classList.remove('open');
+      document.body.classList.remove('menu-open');
     });
   });
 
