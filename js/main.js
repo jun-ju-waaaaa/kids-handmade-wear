@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Fade-in on scroll
   var fadeEls = document.querySelectorAll(
-    '.about, .collection, .info-cards, .order-section, .size-section, .faq-section, .contact-section'
+    '.about, .collection, .info-cards, .order-section, .faq-section, .contact-section'
   );
 
   fadeEls.forEach(function (el) {
