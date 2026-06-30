@@ -1,3 +1,14 @@
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+// Always open at the top, even if the URL carries a #hash (e.g. from a
+// stale bookmark or "Add to Home Screen" shortcut saved while scrolled
+// down a section).
+window.scrollTo(0, 0);
+if (window.location.hash) {
+  history.replaceState(null, '', window.location.pathname + window.location.search);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 
   // Mobile menu toggle
@@ -13,6 +24,24 @@ document.addEventListener('DOMContentLoaded', function () {
     link.addEventListener('click', function () {
       toggle.classList.remove('active');
       nav.classList.remove('open');
+    });
+  });
+
+  // In-page anchor links: smooth-scroll without leaving a #hash in the
+  // URL, so saved bookmarks / "Add to Home Screen" shortcuts always open
+  // at the top of the page instead of re-jumping to whichever section
+  // was last visited.
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var targetId = link.getAttribute('href').slice(1);
+      var target = targetId ? document.getElementById(targetId) : null;
+      e.preventDefault();
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      history.replaceState(null, '', window.location.pathname + window.location.search);
     });
   });
 
