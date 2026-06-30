@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /CLAUDE.md
 
 Sitemap: https://jun-ju-waaaaa.github.io/kids-handmade-wear/sitemap.xml
