@@ -59,7 +59,7 @@ robots.txt
   - すべて本文の文言をそのまま使用（新規コピー追加なし）
 - **OGP・Twitter Card**: `og:image`（og-image.jpg）・`og:locale` 含む全タグ実装済み
 - **robots.txt / sitemap.xml**: 新規作成済み
-- **GA4**: `G-552MFGQY40`（専用ID）を `<head>` 直後に実装
+- **GA4**: 専用測定ID（index.html参照）を `<head>` 直後に実装
 - **フッター Instagram修正**: `@koharubi_handmade`（誤）→ `@atelier_koharubi`（正）に統一
 
 ### iOS対応
