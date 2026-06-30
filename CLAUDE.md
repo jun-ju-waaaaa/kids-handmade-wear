@@ -15,7 +15,7 @@
 
 | 項目 | 値 |
 |------|-----|
-| GA4 測定ID | `G-552MFGQY40`（このサイト専用） |
+| GA4 測定ID | `G-XXXXXXXXXX`（このサイト専用・index.html参照） |
 | Instagram | `https://www.instagram.com/atelier_koharubi/` / `@atelier_koharubi` |
 | OGP画像 | `images/og-image.jpg`（1200×630px） |
 | apple-touch-icon | `images/apple-touch-icon.png` |
