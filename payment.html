@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-552MFGQY40"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-552MFGQY40');
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>お支払いページ | Koharubi コハルビ</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@300;400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .payment-page {
+      min-height: calc(100vh - var(--header-height));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: calc(var(--header-height) + 60px) 24px 80px;
+      background-color: var(--color-bg);
+    }
+
+    .payment-card {
+      max-width: 520px;
+      width: 100%;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 52px 48px;
+      text-align: center;
+    }
+
+    .payment-en {
+      font-family: var(--font-serif-en);
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: var(--color-accent-light);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .payment-title {
+      font-family: var(--font-serif-jp);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--color-text);
+      margin-bottom: 32px;
+    }
+
+    .payment-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--color-border);
+      margin: 0 auto 32px;
+    }
+
+    .payment-message {
+      font-size: 14px;
+      line-height: 2.2;
+      color: var(--color-text-light);
+      margin-bottom: 40px;
+    }
+
+    .payment-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 18px 32px;
+      background: var(--color-accent);
+      color: var(--color-white);
+      font-family: var(--font-serif-jp);
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      border-radius: 4px;
+      transition: opacity 0.3s, transform 0.2s;
+      touch-action: manipulation;
+      text-decoration: none;
+    }
+
+    .payment-btn:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    .payment-btn:active {
+      transform: translateY(0);
+    }
+
+    .payment-security {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 20px;
+      font-size: 12px;
+      color: var(--color-accent-light);
+    }
+
+    .payment-note {
+      margin-top: 36px;
+      padding-top: 32px;
+      border-top: 1px solid var(--color-border);
+      font-size: 12px;
+      color: var(--color-accent-light);
+      line-height: 2;
+      text-align: left;
+    }
+
+    .payment-note p + p {
+      margin-top: 4px;
+    }
+
+    /* シンプルヘッダー（payment専用） */
+    .payment-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      background: rgba(250, 248, 245, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .payment-header-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .payment-header-logo img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .payment-header-logo .logo-main {
+      font-family: var(--font-serif-en);
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: var(--color-text);
+    }
+
+    @media (max-width: 480px) {
+      .payment-card {
+        padding: 40px 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="payment-header">
+    <a href="index.html" class="payment-header-logo">
+      <img src="images/logo2.png" alt="Koharubi">
+      <span class="logo-main">Koharubi</span>
+    </a>
+  </header>
+
+  <main class="payment-page">
+    <div class="payment-card">
+
+      <p class="payment-en">Payment</p>
+      <h1 class="payment-title">お支払い</h1>
+      <div class="payment-divider"></div>
+
+      <p class="payment-message">
+        ご確認いただいた内容にて<br>
+        お支払いページへお進みください。<br>
+        クレジットカードでお支払いいただけます。
+      </p>
+
+      <a href="https://square.link/u/zRcAb6cw" target="_blank" rel="noopener" class="payment-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+          <line x1="1" y1="10" x2="23" y2="10"/>
+        </svg>
+        お支払いページへ進む
+      </a>
+
+      <p class="payment-security">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Square の安全な決済ページへ移動します
+      </p>
+
+      <div class="payment-note">
+        <p>・お支払い完了後、製作を開始いたします。</p>
+        <p>・ご不明な点はInstagramのDMよりお気軽にご連絡ください。</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>&copy; Koharubi handmade all rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
